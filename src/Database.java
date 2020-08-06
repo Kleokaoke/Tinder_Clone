@@ -4,6 +4,7 @@ import java.io.FileReader;
 public class Database {
 
     // Fields:
+    int numberOfUsers;
     int numberOfMales;
     int numberOfFemales;
     Profile[] profiles;
@@ -50,6 +51,8 @@ public class Database {
                         numberOfMales++;
                     } else if(data[3].trim().equals("F")) {
                         numberOfFemales++;
+                    } else {
+                        numberOfUsers++;
                     }
 
                     profiles[i - 1] = profile;
@@ -80,6 +83,8 @@ public class Database {
             } else if(profiles[i].getPerson().getGender().equals("F")) {
                 females[fIndex] = profiles[i];
                 fIndex++;
+            } else {
+
             }
         }
 
