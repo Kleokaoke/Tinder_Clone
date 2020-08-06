@@ -5,6 +5,7 @@ public class Profile {
     // Fields:
     Person person;
     Image[] images = new Image[3];
+    int imageNumber = 0;
 
     // Constructor:
     Profile(Person person, Image image1, Image image2, Image image3) {
@@ -16,6 +17,15 @@ public class Profile {
 
     public Person getPerson() {
         return person;
+    }
+
+    public Image nextImage() {
+        if (imageNumber == 2) {
+            imageNumber = 0;
+        } else {
+            imageNumber++;
+        }
+        return images[imageNumber];
     }
 
     @Override
