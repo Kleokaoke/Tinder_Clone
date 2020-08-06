@@ -15,4 +15,19 @@ public class Person {
         this.location = location;
         this.bio = bio;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", location='" + location + '\'' +
+                ", bio='" + bio + '\'' +
+                '}';
+    }
 }

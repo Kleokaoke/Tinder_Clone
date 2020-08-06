@@ -1,60 +1,62 @@
 public class Image {
 
     // Fields:
-    
-
-        String url ;
-        String description ;
-        String title ;
-        String tags ;  // Array
-    
-
-
+    String url;
+    String description;
+    String title;
+    String tags;
 
     // Constructor:
-
-    Image(String url ,String description , String title, String tags){
-
-        this.url = url ;
-        this.desctription = description ;
-        this.title = title ;
-        this.tags = tags ;
-
+    public Image(String url, String description, String title, String tags) {
+        this.url = url;
+        this.description = description;
+        this.title = title;
+        this.tags = tags;
     }
-    
-       
+
+    // Methods:
+
     // Setters
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-        public void seturl(String url) {
-            this.url = url;
-        }
-        public void set description(String description) {
-            this.description = description;
-        }
-        public void settitle(String title) {
-             this.title = title;
-        }
-        public void settags(String tags) {
-             this.tags = tags;
-        }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    // Getters 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-        public String geturl(){
-            return this.url;
-        }
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 
-         public String getdescription(){
-             return this.description;
-        }
+    // Getters
+    public String getUrl() {
+        return url;
+    }
 
-        public String gettitle(){
-            return this.title;
-        }
+    public String getDescription() {
+        return description;
+    }
 
-        public String gettags(){
-            return this.tags;
-        }
+    public String getTitle() {
+        return title;
+    }
 
+    public String getTags() {
+        return tags;
+    }
 
+    @Override
+    public String toString() {
+        return "Image{" +
+                "url='" + url + '\'' +
+                ", description='" + description + '\'' +
+                ", title='" + title + '\'' +
+                ", tags='" + tags + '\'' +
+                '}';
+    }
 }
