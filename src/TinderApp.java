@@ -48,9 +48,9 @@ public class TinderApp {
                 String option = sc.nextLine();
                 while (true) {
                     if (option.equals("N")) {
-
+                        System.println(display.nextImage)
                     } else {
-                        break;
+                        break ;
                     }
                     // TinderSwipe and the choice to CSV so we can save history of swipes and remove person from list
                 }
