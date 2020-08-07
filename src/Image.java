@@ -1,10 +1,10 @@
 public class Image {
 
     // Fields:
-    String url;
-    String description;
-    String title;
-    String tags;
+    private String url;
+    private String description;
+    private String title;
+    private String tags;
 
     // Constructor:
     public Image(String url, String description, String title, String tags) {

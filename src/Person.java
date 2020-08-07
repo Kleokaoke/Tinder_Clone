@@ -1,12 +1,12 @@
 public class Person {
 
     // Fields:
-    String name;
-    String surname;
-    int age;
-    String gender;
-    String location;
-    String bio;
+    private String name;
+    private String surname;
+    private int age;
+    private String gender;
+    private String location;
+    private String bio;
 
     // Constructor:
     Person(String name, String surname, int age, String gender, String location, String bio) {

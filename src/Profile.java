@@ -1,9 +1,9 @@
 public class Profile {
 
     // Fields:
-    Person person;
-    Image[] images = new Image[3];
-    int imageNumber = 2;
+    private Person person;
+    private Image[] images = new Image[3];
+    private int imageNumber = 2;
 
     // Constructor:
     Profile(Person person, Image image1, Image image2, Image image3) {

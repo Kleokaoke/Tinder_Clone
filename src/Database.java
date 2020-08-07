@@ -4,10 +4,10 @@ import java.io.FileReader;
 public class Database {
 
     // Fields:
-    int numberOfUsers;
-    int numberOfMales;
-    int numberOfFemales;
-    Profile[] profiles;
+    private int numberOfUsers;
+    private int numberOfMales;
+    private int numberOfFemales;
+    private Profile[] profiles;
 
     // Constructor:
     Database () {};

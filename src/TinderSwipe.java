@@ -3,7 +3,7 @@ import java.util.Random;
 public class TinderSwipe {
 
     // Fields:
-    Profile profile;
+    private Profile profile;
 
     // Constructor:
     TinderSwipe() {
