@@ -45,13 +45,15 @@ public class TinderApp {
                 System.out.println(display);
 
                 System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image");
-                String option = sc.nextLine();
+                String option = sc.nextLine().toUpperCase();
                 while (true) {
                     if (option.equals("N")) {
-                        System.println(display.nextImage)
+                        display.nextImage();
                     } else {
                         break ;
                     }
+                    System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image");
+                    option = sc.nextLine().toUpperCase();
                     // TinderSwipe and the choice to CSV so we can save history of swipes and remove person from list
                 }
             }

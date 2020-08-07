@@ -31,7 +31,6 @@ public class Database {
     // Methods:
 
     // Getters:
-    // Getters:
     public void getUsersArray() {
 
         try {
@@ -51,9 +50,8 @@ public class Database {
                         numberOfMales++;
                     } else if(data[3].trim().equals("F")) {
                         numberOfFemales++;
-                    } else {
-                        numberOfUsers++;
                     }
+                    numberOfUsers++;
 
                     profiles[i - 1] = profile;
                 }
@@ -71,9 +69,11 @@ public class Database {
 
         Profile[] males = new Profile[numberOfMales];
         Profile[] females = new Profile[numberOfFemales];
+        Profile[] users = new Profile[numberOfUsers];
 
         int mIndex = 0;
         int fIndex = 0;
+        int uIndex = 0;
 
 
         for (int i = 0; i < profiles.length; i++) {
@@ -83,15 +83,18 @@ public class Database {
             } else if(profiles[i].getPerson().getGender().equals("F")) {
                 females[fIndex] = profiles[i];
                 fIndex++;
-            } else {
-
             }
+
+            users[uIndex] = profiles[i];
+            uIndex++;
         }
 
         if(gender.equals("M")) {
             return males;
+        } else if(gender.equals("F")) {
+            return females;
         }
 
-        return females;
+        return users;
     }
 }

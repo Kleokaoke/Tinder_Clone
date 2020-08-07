@@ -25,6 +25,7 @@ public class Profile {
         } else {
             imageNumber++;
         }
+        System.out.println(images[imageNumber]);
         return images[imageNumber];
     }
 
