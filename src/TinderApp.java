@@ -42,7 +42,7 @@ public class TinderApp {
         String choice = null;
 
         while (true) {
-            System.out.println("Are you looking to meet (M)ale, (F)emale, (N)o preference or would you like to (Q)uit:");
+            System.out.print("Are you looking to meet a (M)ale, (F)emale, (N)o preference or would you like to (Q)uit: ");
             choice = sc.nextLine().toUpperCase();
 
             if (choice.equals("Q")) {
@@ -52,22 +52,22 @@ public class TinderApp {
                 Profile display = TS.assignUser(choice);
                 System.out.println("\nProfile:\n" + display + "\n");
 
-                System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
+                System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p on " + display.getPerson().getName() +" or see the (N)ext image of " + display.getPerson().getName());
                 System.out.println("'R' means you're interested.\n'L' means you're not as interested.\n'U' means you're highly interested.");
                 String option = sc.nextLine().toUpperCase();
 
                 while (true) {
                     if (option.equals("N")) {
-                        System.out.println("Next Image:");
+                        System.out.println("\nNext Image:");
                         System.out.println(display.nextImage());
                     } else {
                         TS.swipe(display, option);
                         if (option.equals("U")) {
-                            System.out.println("You are Highly Interested in " + display.getPerson().getName());
+                            System.out.println("\n" + me.getName() + " you were Highly Interested in " + display.getPerson().getName() + "\n");
                         } else if (option.equals("R")) {
-                            System.out.println("You are Interested in " + display.getPerson().getName());
+                            System.out.println("\n" + me.getName() + " you were Interested in " + display.getPerson().getName() + "\n");
                         } else {
-                            System.out.println("You are Not Interested in " + display.getPerson().getName());
+                            System.out.println("\n" + me.getName() + " you were Not Interested in " + display.getPerson().getName() + "\n");
                         }
                         break ;
                     }
@@ -75,10 +75,10 @@ public class TinderApp {
                     System.out.println("'R' means you're interested.\n'L' means you're not as interested.\n'U' means you're highly interested.");
                     option = sc.nextLine().toUpperCase();
                 }
-
-                System.out.println("Thank you for using Bootleg-Tinder");
             }
         }
+
+        System.out.println("\nThank you for using Bootleg-Tinder " + me.getName());
     }
 
     private static String userInput(String input) {
