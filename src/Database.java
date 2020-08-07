@@ -17,8 +17,7 @@ public class Database {
         int i = 0;
         try {
             BufferedReader csvReader = new BufferedReader(new FileReader(filename));
-            String row = null;
-            while ((row = csvReader.readLine()) != null) {
+            while (csvReader.readLine() != null) {
                 i++;
             }
             csvReader.close();
