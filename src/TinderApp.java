@@ -72,8 +72,11 @@ public class TinderApp {
                         break ;
                     }
                     System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
+                    System.out.println("'R' means you're interested.\n'L' means you're not as interested.\n'U' means you're highly interested.");
                     option = sc.nextLine().toUpperCase();
                 }
+
+                System.out.println("Thank you for using Bootleg-Tinder");
             }
         }
     }
