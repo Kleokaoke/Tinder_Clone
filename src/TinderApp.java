@@ -6,7 +6,13 @@ public class TinderApp {
 
     public static void main(String[] args) {
 
-        System.out.println("Tinder");
+        System.out.println("      )             (\n" +
+                "  )  /( (           )\\ )   (   (\n" +
+                " ( )( )))\\   (     (()/(  ))\\  )(\n" +
+                "(_(_())((_)  )\\ )   ((_))/((_)(()\\\n" +
+                "|_   _| (_) _(_/(   _| |(_))   ((_)\n" +
+                "  | |   | || ' \\))/ _` |/ -_) | '_|\n" +
+                "  |_|   |_||_||_| \\__,_|\\___| |_|\n");
 
         System.out.print("Please enter your name: ");
         String name = sc.nextLine();
