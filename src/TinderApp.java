@@ -54,6 +54,13 @@ public class TinderApp {
                         System.out.println(display.nextImage());;
                     } else {
                         TS.swipe(display, option);
+                        if (option.equals("U")) {
+                            System.out.println("You are Highly Interested in " + display.getPerson().getName());
+                        } else if (option.equals("R")) {
+                            System.out.println("You are Interested in " + display.getPerson().getName());
+                        } else {
+                            System.out.println("You are Not Interested in " + display.getPerson().getName());
+                        }
                         break ;
                     }
                     System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
