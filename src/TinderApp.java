@@ -48,13 +48,14 @@ public class TinderApp {
                 String option = sc.nextLine().toUpperCase();
                 while (true) {
                     if (option.equals("N")) {
+                        System.out.println("Next Image:");
                         display.nextImage();
                     } else {
+                        TS.swipe(display, option);
                         break ;
                     }
                     System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image");
                     option = sc.nextLine().toUpperCase();
-                    // TinderSwipe and the choice to CSV so we can save history of swipes and remove person from list
                 }
             }
         }

@@ -23,4 +23,16 @@ public class TinderSwipe {
 
         return profiles[randomIndex];
     }
+
+    public void swipe(Profile user, String option) {
+        DatabaseSwiper DBS = new DatabaseSwiper();
+        if (option.equals("U")) {
+            option = "Super Like";
+        } else if (option.equals("R")) {
+            option = "Right";
+        } else {
+            option = "Left";
+        }
+        DBS.addSwipe(user, option);
+    }
 }

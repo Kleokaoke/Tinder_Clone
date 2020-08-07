@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 
 public class Database {
 
@@ -43,8 +42,10 @@ public class Database {
                 if(i > 0) {
                     String[] data = row.split(",");
                     Image image1 = new Image(data[6].trim(), data[7].trim(), data[8].trim(), data[9].trim());
-                    Person person = new Person(data[0].trim(), Integer.parseInt(data[2].trim()), data[3].trim(), data[4].trim(), data[5].trim());
-                    Profile profile = new Profile(person, image1, image1, image1);
+                    Image image2 = new Image(data[10].trim(), data[11].trim(), data[12].trim(), data[13].trim());
+                    Image image3 = new Image(data[14].trim(), data[15].trim(), data[16].trim(), data[17].trim());
+                    Person person = new Person(data[0].trim(), data[1].trim(), Integer.parseInt(data[2].trim()), data[3].trim(), data[4].trim(), data[5].trim());
+                    Profile profile = new Profile(person, image1, image2, image3);
 
                     if(data[3].trim().equals("M")) {
                         numberOfMales++;
