@@ -6,31 +6,34 @@ public class TinderApp {
 
     public static void main(String[] args) {
 
-//        System.out.println("Tinder");
-//
-//        System.out.println("Please enter your name");
-//        String name = sc.nextLine();
-//
-//        System.out.println("Please enter your age");
-//        int age = sc.nextInt();
-//        sc.nextLine();
-//
-//        System.out.println("Please enter your gender");
-//        String gender = sc.nextLine();
-//
-//        System.out.println("Please enter your location");
-//        String location = sc.nextLine();
-//
-//        System.out.println("Please enter your bio");
-//        String bio = sc.nextLine();
-//
-//        Person me = new Person(name, age, gender, location, bio);
-//        Image myImage1 = new Image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FZooccilyrics%2F&psig=AOvVaw0iTuvd6yXcdUjDxx40GsnN&ust=1596807533594000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCP7-LZhusCFQAAAAAdAAAAABAD", "Zooci animation", "Zooci coke dope DP", "Anxiety album black-shirt");
-//        Image myImage2 = new Image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FZooccilyrics%2F&psig=AOvVaw0iTuvd6yXcdUjDxx40GsnN&ust=1596807533594000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCP7-LZhusCFQAAAAAdAAAAABAD", "Zooci animation", "Zooci coke dope DP", "Anxiety album black-shirt");
-//        Image myImage3 = new Image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FZooccilyrics%2F&psig=AOvVaw0iTuvd6yXcdUjDxx40GsnN&ust=1596807533594000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCP7-LZhusCFQAAAAAdAAAAABAD", "Zooci animation", "Zooci coke dope DP", "Anxiety album black-shirt");
-//        Profile myProfile = new Profile(me, myImage1, myImage2, myImage3);
-//
-//        System.out.println(myProfile);
+        System.out.println("Tinder");
+
+        System.out.println("Please enter your name");
+        String name = sc.nextLine().substring(0,1).toUpperCase();
+
+        System.out.println("Please enter your surname");
+        String surname = sc.nextLine().substring(0,1).toUpperCase();
+
+        System.out.println("Please enter your age");
+        int age = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Please enter your gender");
+        String gender = sc.nextLine().toUpperCase();
+
+        System.out.println("Please enter your location");
+        String location = sc.nextLine().substring(0,1).toUpperCase();
+
+        System.out.println("Please enter your bio");
+        String bio = sc.nextLine().substring(0,1).toUpperCase();
+
+        Person me = new Person(name, surname, age, gender, location, bio);
+        Image myImage1 = new Image("https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBXQyWJ.img?h=552&w=750&m=6&q=60&u=t&o=f&l=f&x=912&y=547", "Justin Timberlake on the red carpet", "Justin Timberlake", "Justin Timberlake black-suit");
+        Image myImage2 = new Image("https://static.billboard.com/files/2020/03/justin-bieber-seasons-yt-2020-billboard-u-1548-1583525325.jpg", "Justin Bieber on the red carpet", "Justin Bieber", "Justin Bieber white-shirt");
+        Image myImage3 = new Image("https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/06/02/08/drake.jpg", "Drake on the red carpet", "Drake", "Drake brown-suit");
+        Profile myProfile = new Profile(me, myImage1, myImage2, myImage3);
+
+        System.out.println(myProfile);
 
         String choice = null;
 
@@ -46,7 +49,7 @@ public class TinderApp {
                 System.out.println(display);
 
                 System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
-                System.out.println("'R' means you're interested.\n 'L' means you're not as interested.\n 'U' means you're highly interested.")
+                System.out.println("'R' means you're interested.\n'L' means you're not as interested.\n'U' means you're highly interested.");
                 String option = sc.nextLine().toUpperCase();
 
                 while (true) {
