@@ -15,6 +15,10 @@ public class Image {
     }
 
     // Methods:
+    @Override
+    public String toString() {
+        return title + "\n" + description + "\nURL = " + url + "\nTags='" + tags;
+    }
 
     // Setters
     public void setUrl(String url) {
@@ -48,15 +52,5 @@ public class Image {
 
     public String getTags() {
         return tags;
-    }
-
-    @Override
-    public String toString() {
-        return "Image{" +
-                "url='" + url + '\'' +
-                ", description='" + description + '\'' +
-                ", title='" + title + '\'' +
-                ", tags='" + tags + '\'' +
-                '}';
     }
 }

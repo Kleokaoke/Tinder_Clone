@@ -35,4 +35,14 @@ public class TinderSwipe {
         }
         DBS.addSwipe(user, option);
     }
+
+    // Setter:
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
+    // Getter:
+    public Profile getProfile() {
+        return profile;
+    }
 }

@@ -1,11 +1,9 @@
-import java.util.Arrays;
-
 public class Profile {
 
     // Fields:
     Person person;
     Image[] images = new Image[3];
-    int imageNumber = 0;
+    int imageNumber = 2;
 
     // Constructor:
     Profile(Person person, Image image1, Image image2, Image image3) {
@@ -15,8 +13,10 @@ public class Profile {
         images[2] = image3;
     }
 
-    public Person getPerson() {
-        return person;
+    // Methods:
+    @Override
+    public String toString() {
+        return person + "\n" + nextImage();
     }
 
     public Image nextImage() {
@@ -25,15 +25,32 @@ public class Profile {
         } else {
             imageNumber++;
         }
-        System.out.println(images[imageNumber]);
         return images[imageNumber];
     }
 
-    @Override
-    public String toString() {
-        return "Profile{" +
-                "person=" + person +
-                ", images=" + Arrays.toString(images) +
-                '}';
+    // Setters:
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public void setImages(Image[] images) {
+        this.images = images;
+    }
+
+    public void setImageNumber(int imageNumber) {
+        this.imageNumber = imageNumber;
+    }
+
+    // Getters:
+    public Person getPerson() {
+        return person;
+    }
+
+    public Image[] getImages() {
+        return images;
+    }
+
+    public int getImageNumber() {
+        return imageNumber;
     }
 }

@@ -4,8 +4,9 @@ import java.io.IOException;
 
 public class DatabaseSwiper {
 
-    DatabaseSwiper() { }
+    DatabaseSwiper() {}
 
+    // Method:
     public void addSwipe(Profile user,String option) {
         String content = "\n" + user.getPerson().getName() + ", " + user.getPerson().getSurname() + ", " + user.getPerson().getAge() + ", " + user.getPerson().getGender() + ", " + user.getPerson().getLocation() + ", " + option;
 

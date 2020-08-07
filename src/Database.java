@@ -1,4 +1,5 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Database {
 
@@ -11,6 +12,7 @@ public class Database {
     // Constructor:
     Database () {};
 
+    // Methods:
     public int countLinesInCSV(String filename) {
         int i = 0;
         try {
@@ -26,8 +28,6 @@ public class Database {
 
         return i;
     }
-
-    // Methods:
 
     // Getters:
     public void getUsersArray() {

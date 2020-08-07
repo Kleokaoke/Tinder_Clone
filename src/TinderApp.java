@@ -35,26 +35,28 @@ public class TinderApp {
         String choice = null;
 
         while (true) {
-            System.out.println("Are you looking to meet Male, Female or (no Preference):");
-            choice = sc.nextLine();
-            if (choice.equals("q")) {
+            System.out.println("Are you looking to meet (M)ale, (F)emale, (N)o preference or would you like to (Q)uit:");
+            choice = sc.nextLine().toUpperCase();
+
+            if (choice.equals("Q")) {
                 break;
             } else {
                 TinderSwipe TS = new TinderSwipe();
                 Profile display = TS.assignUser(choice);
                 System.out.println(display);
 
-                System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image");
+                System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
                 String option = sc.nextLine().toUpperCase();
+
                 while (true) {
                     if (option.equals("N")) {
                         System.out.println("Next Image:");
-                        display.nextImage();
+                        System.out.println(display.nextImage());;
                     } else {
                         TS.swipe(display, option);
                         break ;
                     }
-                    System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image");
+                    System.out.println("Would you like to Swipe (R)ight, (L)eft, (U)p or (N)ext image on " + display.getPerson().getName());
                     option = sc.nextLine().toUpperCase();
                 }
             }

@@ -18,6 +18,15 @@ public class Person {
         this.bio = bio;
     }
 
+    // Methods:
+    @Override
+    public String toString() {
+        return name + ", " + age + ", " + gender + '\n' +
+                location + '\n' +
+                bio;
+    }
+
+    // Getters:
     public String getGender() {
         return gender;
     }
@@ -42,14 +51,28 @@ public class Person {
         return bio;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", location='" + location + '\'' +
-                ", bio='" + bio + '\'' +
-                '}';
+    // Setters:
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 }
