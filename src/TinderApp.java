@@ -14,27 +14,21 @@ public class TinderApp {
                 "  | |   | || ' \\))/ _` |/ -_) | '_|\n" +
                 "  |_|   |_||_||_| \\__,_|\\___| |_|\n");
 
-        System.out.print("Please enter your name: ");
-        String name = sc.nextLine();
+        String name = userInput("name");
         name = name.substring(0,1).toUpperCase() + name.substring(1);
 
-        System.out.print("Please enter your surname: ");
-        String surname = sc.nextLine();
+        String surname = userInput("surname");
         surname = surname.substring(0,1).toUpperCase() + surname.substring(1);
 
-        System.out.print("Please enter your age: ");
-        int age = sc.nextInt();
-        sc.nextLine();
+        int age = Integer.parseInt(userInput("age"));
 
-        System.out.print("Please enter your gender: ");
-        String gender = sc.nextLine().toUpperCase();
+        String gender = userInput("gender");
+        gender = gender.substring(0,1).toUpperCase();
 
-        System.out.print("Please enter your location: ");
-        String location = sc.nextLine();
+        String location = userInput("location");
         location = location.substring(0,1).toUpperCase() + location.substring(1);
 
-        System.out.print("Please enter your bio: ");
-        String bio = sc.nextLine();
+        String bio = userInput("bio");
         bio = bio.substring(0,1).toUpperCase() + bio.substring(1);
 
         Person me = new Person(name, surname, age, gender, location, bio);
@@ -82,5 +76,29 @@ public class TinderApp {
                 }
             }
         }
+    }
+
+    private static String userInput(String input) {
+        System.out.print("Please enter your " + input + ": ");
+        String givenInput = sc.nextLine();
+        if (input.equals("age")) {
+            String regex = "\\d+";
+            while (true) {
+                if (!givenInput.trim().isEmpty() && givenInput.trim().matches(regex)) {
+                    break;
+                }
+                System.out.print("Invalid input. Please enter your " + input + ": ");
+                givenInput = sc.nextLine();
+            }
+        } else {
+            while (true) {
+                if (!givenInput.trim().isEmpty()) {
+                    break;
+                }
+                System.out.print("Invalid input. Please enter your " + input + ": ");
+                givenInput = sc.nextLine();
+            }
+        }
+        return givenInput;
     }
 }
